@@ -5,7 +5,7 @@ Chat application using Spring WebSockets.
 ## Installation
 
 Pre-req: must have java 8 installed.  
-Download the ar file from: https://www.dropbox.com/home/ASAPP  
+Download the ar file from: https://www.dropbox.com/sh/ey300anqvlujsvh/AABGOcrKqnQO-xNKOtJrtna0a?dl=0  
 Run the command: java -jar chat-room.war  
 
 ## Usage
