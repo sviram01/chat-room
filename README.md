@@ -4,7 +4,7 @@ Chat application using Spring WebSockets.
 
 ## Installation
 
-Pre-req: must have java 8 installed.
+Pre-req: must have java 8 installed  
 Clone the repo: git clone https://github.com/sviram01/chat-room.git  
 Run: mvn clean install  
 
