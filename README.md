@@ -18,7 +18,7 @@ Follow the usage
 Run the command: java -jar chat-room.war  
 
 After starting the application with the run command go to localhost:9030  
-You will see a login screen use any of the sameple logins below:  
+You will see a login screen use any of the sample logins below:  
 username/password:  
 demo1/demo1  
 demo2/demo2  

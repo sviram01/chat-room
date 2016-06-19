@@ -156,6 +156,7 @@ var getUser = function getUser() {
 		async : false,
 		success : function(data, textStatus, jqXHR) {
 			sesionUser = data;
+			$("#title").text(data.firstName + " " + data.lastName)
 		},
 		error : function(jqXHR, textStatus, errorThrown) {
 			console.log('Error occurred!');
@@ -200,7 +201,8 @@ function loadUsers() {
 		success : function(data, textStatus, jqXHR) {
 			for (i in data) {
 				console.log(data[i]);
-				chat.renderUser(data[i]);			}
+				chat.renderUser(data[i]);
+			}
 		},
 		error : function(jqXHR, textStatus, errorThrown) {
 			console.log('Error occurred!');
