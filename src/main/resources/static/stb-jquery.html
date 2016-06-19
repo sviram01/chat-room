@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/> 
+		<title>Chat Widget</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript"> </script>
+	</head>
+
+
+	<body>
+
+		<div class="container clearfix">
+			<div class="people-list" id="people-list">
+				<ul class="list" id="user-list">
+				</ul>
+			</div>
+
+			<div class="chat">
+				<div class="chat-header clearfix">
+					<div class="chat-about">
+						<div class="chat-with">Welcome!</div>
+					</div>
+				</div>
+
+				<div class="chat-history">
+					<ul>
+						<li>
+							<div>
+								Click on any user on left to chat with them!
+							</div>
+						</li>
+					</ul>
+
+				</div>
+
+				<div class="chat-message clearfix">
+					<textarea name="message-to-send" id="message-to-send" placeholder="Type your message" rows="3" maxlength="255" disabled></textarea>
+					<button id="send-button">Send</button>
+					<div id = "textarea_feedback"> </div> 
+				</div>
+			</div>
+
+		</div>
+
+		<script id="message-template" type="text/x-handlebars-template">
+			<li class="clearfix">
+				<div class="message-data align-right">
+					<span class="message-data-time" >{{messageTime}}</span> &nbsp; &nbsp;
+					<span class="message-data-name" >{{senderUser.firstName}} {{senderUser.lastName}}</span> <i class="fa fa-circle me"/>
+				</div>
+				<div class="message other-message float-right">
+					{{messageText}}
+				</div>
+			</li>
+		</script>
+
+		<script id="message-response-template" type="text/x-handlebars-template">
+			<li>
+				<div class="message-data">
+					<span class="message-data-name">
+						<i class="fa fa-circle online"/>{{senderUser.firstName}} {{senderUser.lastName}}</span>
+					<span class="message-data-time">{{messageTime}}</span>
+				</div>
+				<div class="message my-message">
+					{{messageText}}
+				</div>
+			</li>
+		</script>
+
+		<script id="user-template" type="text/x-handlebars-template">
+
+			<li class="clearfix">
+				<div class="about">
+					<div class="name">
+						<a href="#" onclick="updateUser('{{username}}','{{firstName}}','{{lastName}}');">{{firstName}} {{lastName}}
+					</div>
+				</div>
+			</li>
+		</script>
+
+		<script src="js/jquery/dist/jquery.min.js"></script>
+		<script src="js/sockjs-1.1.0.js"></script>
+		<script src="js/stomp.js"></script>
+		<script src='js/handlebars.min.js'></script>
+		<script src="js/index.js"></script>
+
+	</body>
+</html>

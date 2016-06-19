@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+	<jmxConfigurator />
+	
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread]  %logger{64} - %msg%n</pattern>
+		</encoder>
+		<file>/var/log/localhost/cidws/cid-ws-service.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<maxIndex>10</maxIndex>
+			<FileNamePattern>/var/log/localhost/cidws/cid-ws-service.log.%i
+			</FileNamePattern>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>50MB</MaxFileSize>
+		</triggeringPolicy>
+	</appender>
+
+	<logger name="reactor" level="INFO" />
+	<logger name="com.google.code" level="OFF" />
+	<logger name="org.springframework" level="INFO" />
+	<logger name="org.apache" level="ERROR" />
+	<logger name="org.springframework.jdbc" level="ERROR" />
+
+	<root level="DEBUG">
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="FILE" />
+	</root>
+
+</included>
