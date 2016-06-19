@@ -4,12 +4,20 @@ Chat application using Spring WebSockets.
 
 ## Installation
 
-Pre-req: must have java 8 installed.  
-Download the ar file from: https://www.dropbox.com/sh/ey300anqvlujsvh/AABGOcrKqnQO-xNKOtJrtna0a?dl=0  
-Run the command: java -jar chat-room.war  
+Pre-req: must have java 8 installed.
+Clone the repo: git clone https://github.com/sviram01/chat-room.git  
+Run: mvn clean install  
+
+## Run demo
+
+Download the war file from: https://www.dropbox.com/sh/ey300anqvlujsvh/AABGOcrKqnQO-xNKOtJrtna0a?dl=0 
+Follow the usage
 
 ## Usage
-After starting the application with the run command go to localhost:9030.  
+
+Run the command: java -jar chat-room.war  
+
+After starting the application with the run command go to localhost:9030  
 You will see a login screen use any of the sameple logins below:  
 username/password:  
 demo1/demo1  
@@ -18,7 +26,8 @@ demo3/demo3
 demo4/demo4  
 demo5/demo5  
 
-Yon can then chat with the user listed on the app.
+Yon can then chat with the user listed on the app
+
 
 ## Contributing
 
